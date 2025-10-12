@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Imagination Interface</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            color: #76a9fa;
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .section {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        input[type="text"], input[type="number"] {
+            flex-grow: 1;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            background-color: #333;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #76a9fa;
+            box-shadow: 0 0 8px rgba(118, 169, 250, 0.5);
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #76a9fa;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #5d8eeb;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .result-box {
+            background-color: #121212;
+            padding: 15px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px dashed #444;
+            overflow-x: auto;
+        }
+        .result-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        .status {
+            margin-top: 15px;
+            font-style: italic;
+            color: #aaa;
+        }
+        .error {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Quantum Imagination Interface 🚀</h1>
+
+        <div class="section">
+            <h2>🧠 Qiskit Command Processor</h2>
+            <div class="input-group">
+                <input type="text" id="commandInput" placeholder="Enter Qiskit command...">
+                <button onclick="processCommand()">Execute Command</button>
+            </div>
+            <div id="commandResult" class="result-box"></div>
+        </div>
+
+        <div class="section">
+            <h2>🛫 Quantum Plane Simulator</h2>
+            <div class="input-group">
+                <input type="text" id="planeName" placeholder="Plane Name (e.g., Falcon)">
+                <input type="text" id="planeType" placeholder="Plane Type (e.g., Quantum-Class)">
+                <button onclick="createPlane()">Create Plane</button>
+            </div>
+            <div id="planeResult" class="result-box"></div>
+        </div>
+
+        <div class="section">
+            <h2>🧮 Cosmos Computation via C Library</h2>
+            <div class="input-group">
+                <input type="number" id="cosmosValue" placeholder="Enter a number (e.g., 42)">
+                <button onclick="computeCosmos()">Compute Cosmos</button>
+            </div>
+            <div id="cosmosResult" class="result-box"></div>
+        </div>
+
+        <div class="section">
+            <h2>📊 ML Predictions (Naive Bayes + KNN)</h2>
+            <div class="input-group">
+                <button onclick="getMLPredictions()">Get Predictions</button>
+            </div>
+            <div id="mlResult" class="result-box"></div>
+        </div>
+
+        <div class="section">
+            <h2>🔐 DNS Severity Matrix</h2>
+            <div class="input-group">
+                <button onclick="getDNSSeverity()">Get Severity Data</button>
+            </div>
+            <div id="dnsResult" class="result-box"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "http://127.0.0.1:5000"; // Adjust this if your Flask server is on a different port/host
+
+        // Function to handle command processing
+        async function processCommand() {
+            const input = document.getElementById('commandInput').value;
+            const resultBox = document.getElementById('commandResult');
+            resultBox.innerHTML = '<div class="status">Processing...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/process_command`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `user_command=${encodeURIComponent(input)}`
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultBox.innerHTML = `<p><strong>Command Sent:</strong> ${data.command}</p>
+                                        <p><strong>Similar Item Found:</strong> ${data.similar_item.item}</p>
+                                        <p><strong>Similarity Score:</strong> ${data.similar_item.similarity.toFixed(4)}</p>`;
+            } catch (error) {
+                resultBox.innerHTML = `<div class="status error">Error: Could not connect to the server or process the command. ${error.message}</div>`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Function to handle plane creation
+        async function createPlane() {
+            const name = document.getElementById('planeName').value;
+            const type = document.getElementById('planeType').value;
+            const resultBox = document.getElementById('planeResult');
+            resultBox.innerHTML = '<div class="status">Creating quantum plane...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/create_plane`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `plane_name=${encodeURIComponent(name)}&plane_type=${encodeURIComponent(type)}`
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultBox.innerHTML = `<p><strong>Activation:</strong> ${data.activation_message}</p>
+                                        <p><strong>Qiskit Simulation:</strong> ${data.qiskit_simulation}</p>
+                                        <p><strong>Dynamic Content:</strong> ${data.dynamic_content}</p>
+                                        <p><strong>Instruction:</strong> ${data.instruction}</p>
+                                        ${data.visualization}`; // The image tag is included directly from the API response
+            } catch (error) {
+                resultBox.innerHTML = `<div class="status error">Error: Could not create the quantum plane. ${error.message}</div>`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Function to handle cosmos computation
+        async function computeCosmos() {
+            const value = document.getElementById('cosmosValue').value;
+            const resultBox = document.getElementById('cosmosResult');
+            resultBox.innerHTML = '<div class="status">Computing...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/compute-cosmos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ value: parseInt(value) || 0 })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultBox.innerHTML = `<p><strong>Computation Result:</strong> ${data.result}</p>`;
+            } catch (error) {
+                resultBox.innerHTML = `<div class="status error">Error: Could not compute cosmos. ${error.message}</div>`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Function to handle ML predictions
+        async function getMLPredictions() {
+            const resultBox = document.getElementById('mlResult');
+            resultBox.innerHTML = '<div class="status">Fetching ML predictions...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/ml-predict`);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultBox.innerHTML = `<p><strong>Naive Bayes Result:</strong> ${JSON.stringify(data.naive_bayes)}</p>
+                                        <p><strong>KNN Result:</strong> ${JSON.stringify(data.knn)}</p>`;
+            } catch (error) {
+                resultBox.innerHTML = `<div class="status error">Error: Could not get ML predictions. ${error.message}</div>`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Function to handle DNS severity data
+        async function getDNSSeverity() {
+            const resultBox = document.getElementById('dnsResult');
+            resultBox.innerHTML = '<div class="status">Fetching DNS severity data...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/dns-severity`);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                resultBox.innerHTML
