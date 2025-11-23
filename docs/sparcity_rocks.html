@@ -7,10 +7,10 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100%;
       font-family: Arial, sans-serif;
       color: #fff;
-      overflow: hidden;
+      overflow-y: auto; /* allow vertical scrolling */
     }
     .blur-bg {
       position: fixed;
@@ -52,6 +52,7 @@
       border: 2px solid orange;
       padding: 20px;
       line-height: 1.6;
+      margin-bottom: 40px;
     }
     .metadata-box h2 {
       color: orange;
