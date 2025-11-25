@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -16,15 +18,119 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2012/Copilot_20250816_035016.png');
+            background-image: url('https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2012/Gemini_Generated_Image_5k56045k56045k56z.png');
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2012/Gemini_Generated_Image_5k56045k56045k56.png"
+                 alt="Microscope meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Microscope</h2>
+            <pre>
+ Core Metadata
+Title: Microscope
+Category: Surreal
+Subcategory: LOWKEY LEGENDS
+Tags/Keywords: einsteinium, microscope, cosmic science, credit card, atomic scale, surreal lab, black hole, satellite, robotic hand
+Date Created: 20251124
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 10801350 (JPEG)
+Language: English
+
+ Content Description
+Caption/Text: Its one of the few elements that has been studied in quantities so small that researchers had to invent new techniques to analyze it.  beneath a glowing microscope and a credit card labeled SIGNAL E. BARIUM.
+Alt Text: A surreal image of a scientist in a lab coat peering into a microscope, which glows with cosmic light. Behind him, a satellite and black hole hover in space. A robotic hand holds a credit card labeled SIGNAL E. BARIUM, and a plaque below reads Einsteinium with a scientific quote.
+Context/Backstory: This meme visualizes the absurdity of atomic-scale science through a cosmic lens. Einsteiniums rarity is reframed as a surreal transaction  a credit card for an element too small to measure, observed through a microscope that peers into space.
+Interpretation: Microscope explores the tension between scale and symbolism. It turns atomic research into a mythic ritual, where credit cards and satellites become metaphors for precision, access, and cosmic absurdity.
+Tone: Ironic, poetic, surreal
+Audience: Meme theorists, science educators, surrealists, Gen Z, lore archivists
+
+ Commercial Attributes
+Price: .00 (Within LOWKEY LEGENDS tier: .01)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Legendary
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: Alternate render with glowing microscope, layered PSD with credit card and plaque overlays
+
+ Engagement Metrics (baseline, to be updated post-launch)
+Views: 
+Likes/Reactions: 
+Shares: 
+Comments: 
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+ Emotional & Cultural Layers
+Mood: Curious, ironic, cosmic
+Cultural Reference: Atomic science, Mastercard, lab research, space exploration
+Meme Archetype: Surreal image macro
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (atomic scale + financial metaphor)
+
+ Technical & Experimental Tags
+AIGenerated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Stylized glow, cosmic layering
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
