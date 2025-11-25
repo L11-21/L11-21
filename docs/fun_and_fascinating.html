@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -20,11 +22,115 @@
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2013/Copilot_20250816_03521501.png"
+                 alt="Fun & Fascinating meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Fun & Fascinating</h2>
+            <pre>
+ Core Metadata
+Title: Fun & Fascinating
+Category: Surreal
+Subcategory: MIDTIER MAGIC
+Tags/Keywords: einsteinium, glowing glass, radioactive trivia, hydrogen test, microgram, educational meme, doll, vapor effect
+Date Created: 20251124
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 10801350 (JPEG)
+Language: English
+
+ Content Description
+Caption/Text: First identified in the fallout the 1952 hydrogyn test. It glows blue in the dartto radioactive decay. By 1961, scientists had collected enough to be visible to the naked eye  just 10 micrograms! Its one of few elements studied in quantities so small that researchers had to invent new techniques to analyze it.
+Alt Text: A surreal educational display titled Fun & Fascinating Facts featuring four glasses with different contents. One glows blue with vapor-like energy. A doll sits in the background. The meme text describes a radioactive element discovered in hydrogen test fallout, studied in microgram quantities.
+Context/Backstory: This meme reframes atomic trivia as a whimsical science fair display. The glowing glass and doll evoke childhood curiosity, while the distorted text and surreal glow hint at the absurdity of measuring invisible elements.
+Interpretation: Fun & Fascinating satirizes the way science is simplified for public consumption. It turns einsteiniums rarity into a glowing party trick, blending nostalgia, misinformation, and radioactive wonder.
+Tone: Whimsical, ironic, surreal
+Audience: Science educators, trivia lovers, meme archivists, Gen Z, surrealists
+
+ Commercial Attributes
+Price: .00 (Within MIDTIER MAGIC tier: .01)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Rare
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: Alternate render with corrected text, layered PSD with glowing glass and vapor overlays
+
+ Engagement Metrics (baseline, to be updated post-launch)
+Views: 
+Likes/Reactions: 
+Shares: 
+Comments: 
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+ Emotional & Cultural Layers
+Mood: Curious, nostalgic, ironic
+Cultural Reference: Atomic science, educational posters, childhood science fairs
+Meme Archetype: Surreal image macro
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (atomic trivia + visual distortion)
+
+ Technical & Experimental Tags
+AIGenerated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Stylized glow, text distortion, vapor effect
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
