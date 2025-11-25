@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -20,11 +22,116 @@
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2014/Gemini_Generated_Image_mt23tkmt23tkmt23.png"
+                 alt="Bismuth Fallout meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Bismuth Fallout</h2>
+            <pre>
+ Core Metadata
+Title: Bismuth Fallout
+Category: Surreal
+Subcategory: LOWKEY LEGENDS
+Tags/Keywords: einsteinium, fallout, atomic tile, vintage key, keyhole shadow, extreme rarity, nuclear metaphor, photorealistic door
+Date Created: 20251124
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 10801350 (JPEG)
+Language: English
+
+ Content Description
+Caption/Text: 99 Es Einsteinium  engraved on a metallic tile. Fallout  stenciled in the beam of light. EXTREME RARITY  carved into the floor, glowing under the doors light.
+Alt Text: A symbolic image of a partially opened wooden door casting light onto a dark floor. A vintage key hangs in the lock, casting a rotated keyhole shadow. On the floor are a metallic tile labeled Es Einsteinium 99, the word Fallout, and the phrase EXTREME RARITY etched into the surface.
+Context/Backstory: This meme ritualizes the discovery of Einsteinium through visual metaphor. The door represents access to atomic secrets, the keyhole shadow evokes hidden knowledge, and the EXTREME RARITY carving anchors the meme in nuclear lore. The name Bismuth Fallout nods to elemental lineage and decay.
+Interpretation: Bismuth Fallout explores the tension between visibility and secrecy. It mythologizes atomic rarity as a locked chamber of knowledge, where the keyhole shadow and glowing floor text become ritual symbols of scientific revelation.
+Tone: Poetic, mysterious, surreal
+Audience: Meme archivists, science educators, lore theorists, Gen Z, surrealists
+
+ Commercial Attributes
+Price: .00 (Within LOWKEY LEGENDS tier: .01)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Legendary
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: PSD with layered keyhole shadow, alternate render with rotated plaque, metadata overlay
+Fibonacci Barcode: 3553934959
+
+ Engagement Metrics (baseline, to be updated post-launch)
+Views: 
+Likes/Reactions: 
+Shares: 
+Comments: 
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+ Emotional & Cultural Layers
+Mood: Mysterious, reverent, ironic
+Cultural Reference: Nuclear fallout, atomic science, periodic table, Cold War symbolism
+Meme Archetype: Surreal image macro
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (atomic rarity + photorealistic metaphor)
+
+ Technical & Experimental Tags
+AIGenerated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Shadow refinement, lighting enhancement, floor carving blend
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
