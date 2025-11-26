@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -20,11 +22,116 @@
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2017/Copilot_20250816_141349.png"
+                 alt="Atomic Desk meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Atomic Desk</h2>
+            <pre>
+ Core Metadata
+Title: Atomic Desk
+Category: Surreal
+Subcategory: MIDTIER MAGIC
+Tags/Keywords: einsteinium, actinides, nuclear chemistry, periodic table, atomic symbolism, glowing elements, scientific metaphor, stylized chart, instantium, elemental lore
+Date Created: 20251126
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 10801350 (PNG)
+Language: English
+
+ Content Description
+Caption/Text: HOW EINSTEINIUM FITS INTO NUCLEAR CHEMISTRY  title at the top. ACTINIDES  centered label. 99 Es Es instantium  highlighted block with a pointing hand.
+Alt Text: A stylized periodic table focused on Einsteinium (Es), part of the Actinides series. A hand points to the glowing Es block labeled instantium. Surrounding elements include Fe, Ru, Pu, and others. The background is dark and textured, with vivid glowing element blocks.
+Context/Backstory: This meme emerged from a fusion of educational design and atomic lore. It reframes the periodic table as a mythic desk of nuclear insight, where Einsteinium becomes a glowing node of curiosity. The hand gesture evokes selection, focus, and ritualized attention.
+Interpretation: Atomic Desk visualizes the act of choosing knowledge. The glowing Es block represents atomic rarity and scientific reverence. The stylized layout transforms chemistry into a surreal ritual, where each element becomes a portal of meaning.
+Tone: Intellectual, surreal, reverent
+Audience: Science educators, meme theorists, Gen Z, surrealists, periodic table enthusiasts
+
+ Commercial Attributes
+Price: .00 (Within MIDTIER MAGIC tier: .01)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Rare
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: PSD with layered periodic blocks, alternate render with hand removed, metadata overlay
+Fibonacci Barcode: 4423847100
+
+ Engagement Metrics (baseline, to be updated post-launch)
+Views: 
+Likes/Reactions: 
+Shares: 
+Comments: 
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+ Emotional & Cultural Layers
+Mood: Focused, surreal, curious
+Cultural Reference: Periodic table, nuclear chemistry, actinides, atomic science
+Meme Archetype: Stylized educational macro
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (elemental lore + stylized periodic table + instantium)
+
+ Technical & Experimental Tags
+AIGenerated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Glow enhancement, stylized block rendering, dark texture overlay
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
