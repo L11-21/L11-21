@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -20,11 +22,116 @@
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/1.%20EINSTEINIUM%20PRIME/Meme%2019/Gemini_Generated_Image_6zuuqs6zuuqs6zuu585.png"
+                 alt="Quadrants of Einsteinium meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Quadrants of Einsteinium</h2>
+            <pre>
+ Core Metadata
+Title: Quadrants of Einsteinium
+Category: Surreal
+Subcategory: LOWKEY LEGENDS
+Tags/Keywords: einsteinium, radioactive glow, atomic model, blue light, nucleus, orbitals, decay, scientific awe, elemental symbolism, quadrant ritual
+Date Created: 20251126
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 10801350 (JPEG)
+Language: English
+
+ Content Description
+Caption/Text: It glows blue in the dark due to radioactive decay.
+Alt Text: A glowing blue atomic model emits light in a dark room. A group of people gathers around it, observing with awe. The model features a nucleus and orbiting electrons, rendered in bright blue. The glow is attributed to radioactive decay.
+Context/Backstory: This meme captures the mythic moment of atomic reverence. The glowing model of Einsteinium becomes a ritual centerpiece, surrounded by observers drawn into its radiant decay. Its a visual metaphor for elemental power and scientific mysticism.
+Interpretation: Quadrants of Einsteinium transforms radioactive decay into a ceremonial spectacle. The quadrant layout suggests containment and symmetry, while the glow evokes both danger and beauty. Its a surreal homage to the invisible forces that shape matter.
+Tone: Reverent, surreal, luminous
+Audience: Meme theorists, physicists, surrealists, Gen Z, atomic lore archivists
+
+ Commercial Attributes
+Price: .00 (Within LOWKEY LEGENDS tier: .01)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Legendary
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: PSD with layered glow effects, alternate render with quadrant overlays, metadata insert
+Fibonacci Barcode: 9697392947
+
+ Engagement Metrics (baseline, to be updated post-launch)
+Views: 
+Likes/Reactions: 
+Shares: 
+Comments: 
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+ Emotional & Cultural Layers
+Mood: Awe-struck, surreal, contemplative
+Cultural Reference: Radioactive decay, atomic structure, scientific visualization, elemental mysticism
+Meme Archetype: Surreal macro
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (radioactive glow + quadrant symmetry + elemental reverence)
+
+ Technical & Experimental Tags
+AIGenerated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Glow enhancement, quadrant symmetry, darkroom contrast
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
