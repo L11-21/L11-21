@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -7,8 +7,10 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100%;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-y: auto;
         }
         .blur-bg {
             position: fixed;
@@ -20,11 +22,116 @@
             background-size: cover;
             background-position: center;
             filter: blur(8px);
+            z-index: -2;
+        }
+        .shade-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid orange;
+        }
+        .metadata-box {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid orange;
+            padding: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .metadata-box h2 {
+            color: orange;
+            margin-top: 0;
+            text-align: center;
+        }
+        .metadata-box pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="blur-bg"></div>
+    <div class="shade-overlay"></div>
+
+    <div class="container">
+        <!-- Meme image at top center -->
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/L11-21/L11-21/main/OMemeLab/2.%20ADA%20LOVELACE%20SYNTAX/Meme%201/Gemini_Generated_Image_pu1wxcpu1wxcpu1w001.png"
+                 alt="Bus of Inheritance meme image">
+        </div>
+
+        <!-- Metadata box -->
+        <div class="metadata-box">
+            <h2>Bus of Inheritance</h2>
+            <pre>
+🧠 Core Metadata
+Title: Bus of Inheritance
+Category: Wholesome
+Subcategory: LOWKEY LEGENDS
+Tags/Keywords: Ada Lovelace, early computing, candlelight, bus interior, inheritance, historical tech, neon text, generational memory, code legacy, surreal transit
+Date Created: 2025‑12‑02
+Creator/Author: Lando
+Format Type: Image
+Dimensions/Resolution: 1080×1350 (JPEG)
+Language: English
+
+💬 Content Description
+Caption/Text: “I Wrote code ✅ Before electricity”
+Alt Text: A young girl sits on a dimly lit bus at night, holding a portrait of Ada Lovelace with a candle at its base. Above her, neon green text reads “I Wrote code ✅ Before electricity.” The scene blends historical reverence with modern transit.
+Context/Backstory: This meme emerged from a desire to honor Ada Lovelace’s legacy in a contemporary setting. The bus becomes a vessel of inheritance, carrying her contributions forward through generations. The candle and portrait evoke pre-electric innovation, while the neon text bridges past and present.
+Interpretation: “Bus of Inheritance” visualizes the quiet transmission of genius. The girl becomes a symbolic steward of Lovelace’s legacy, riding through time with her image and flame. It’s a surreal tribute to foundational code written before the infrastructure to run it existed.
+Tone: Reverent, nostalgic, surreal
+Audience: Technologists, historians, Gen Z, meme theorists, women in STEM advocates
+
+💸 Commercial Attributes
+Price: $12.00 (Within LOWKEY LEGENDS tier: $10.01–$15)
+License Type: Creative Commons (non-commercial remix allowed)
+Rarity Level: Legendary
+Edition Number: 1 of 1
+Ownership History: Originated by Lando, immortalized in OMemeLab
+Unlockables: PSD with layered candle glow, alternate caption overlays, metadata insert
+Fibonacci Barcode: 4706877423
+
+📈 Engagement Metrics (baseline, to be updated post-launch)
+Views: —
+Likes/Reactions: —
+Shares: —
+Comments: —
+Virality Score: Seeded baseline
+Trend Status: Fresh
+
+🎭 Emotional & Cultural Layers
+Mood: Reflective, reverent, warm
+Cultural Reference: Ada Lovelace, early computing, generational memory, historical innovation
+Meme Archetype: Stylized macro tribute
+Meme Cycle Stage: Fresh
+Inside Joke Level: Niche (pre-electric code + STEM legacy + surreal transit homage)
+
+🧪 Technical & Experimental Tags
+AI‑Generated: Yes
+Remix Source: Original surreal concept
+Template ID: None
+Compression Level: Medium
+Glitch/Filter Effects: Neon overlay, candle glow, ambient bus lighting
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
